@@ -3,7 +3,6 @@ bool reversecomplete = false;
 
 void setup()
 {
-	// put your setup code here, to run once:
 	pinMode(10, INPUT_PULLDOWN);  // reverse
 	pinMode(11, INPUT_PULLDOWN);  // drive
 	pinMode(22, OUTPUT);          // output horn
@@ -11,8 +10,7 @@ void setup()
 
 void loop()
 {
-	// put your main code here, to run repeatedly:
-	if (digitalRead(10) == HIGH && !reversecomplete)
+	if ((digitalRead(10) == HIGH && !reversecomplete) && delay(1000))	// check if still high after a delay in case reverse is pass-through
 	{
 		for (int i=0; i<3; i++)
 		{
