@@ -32,15 +32,19 @@ void loop()
 
 	if (digitalRead(11) == HIGH && !drivecomplete)
 	{
-		for (int i = 0; i < 2; i++)
+		delay(1000);
+		if (digitalRead(11) == HIGH && !drivecomplete)	// just in case drive can also be passed through
 		{
-			digitalWrite(22, HIGH);
-			delay(200);
-			digitalWrite(22, LOW);
-			delay(200);
-		}
+			for (int i = 0; i < 2; i++)
+			{
+				digitalWrite(22, HIGH);
+				delay(200);
+				digitalWrite(22, LOW);
+				delay(200);
+			}
 
-		drivecomplete = true;
+			drivecomplete = true;
+		}
 	}
 	
 	else if (digitalRead(11) == LOW)
