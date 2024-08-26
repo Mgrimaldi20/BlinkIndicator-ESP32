@@ -1,5 +1,5 @@
-bool drivecomplete = false;
-bool reversecomplete = false;
+static bool drivecomplete = false;
+static bool reversecomplete = false;
 
 void setup()
 {
@@ -10,17 +10,21 @@ void setup()
 
 void loop()
 {
-	if ((digitalRead(10) == HIGH && !reversecomplete) && delay(1000))	// check if still high after a delay in case reverse is pass-through
+	if (digitalRead(10) == HIGH && !reversecomplete)
 	{
-		for (int i=0; i<3; i++)
+		delay(1000);
+		if (digitalRead(10) == HIGH && !reversecomplete)	// check if still high after a delay in case reverse is pass-through
 		{
-			digitalWrite(22, HIGH);
-			delay(200);
-			digitalWrite(22, LOW);
-			delay(200);
+			for (int i=0; i<3; i++)
+			{
+				digitalWrite(22, HIGH);
+				delay(200);
+				digitalWrite(22, LOW);
+				delay(200);
+			}
+		
+			reversecomplete = true;
 		}
-	
-		reversecomplete = true;
 	}
 
 	else if (digitalRead(10) == LOW)
