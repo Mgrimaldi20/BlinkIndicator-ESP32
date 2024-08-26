@@ -35,7 +35,7 @@ void loop()
 		delay(1000);
 		if (digitalRead(11) == HIGH && !drivecomplete)	// just in case drive can also be passed through
 		{
-			for (int i = 0; i < 2; i++)
+			for (int i=0; i<2; i++)
 			{
 				digitalWrite(22, HIGH);
 				delay(200);
