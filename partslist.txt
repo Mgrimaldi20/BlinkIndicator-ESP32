@@ -1,0 +1,4 @@
+* 1x MC7805ABTG 35V in, 1A 5V Regulator - Input voltage from batt.
+* 2x 2KOhm 1/4W Resistors - Voltage divider for transmission signal.
+* 1x 200Ohm 1/4W Resistor - Output signal voltage divider.
+* 2x S-812C24AY-B2-U 16V MAX in, 30mA 2.4V Regulator - Input signal from voltage divider.
