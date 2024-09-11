@@ -1,7 +1,6 @@
 * 1x MC7805ABTG 35V in, 1A 5V Regulator - Input voltage from batt.
-* 2x 2KOhm 1/4W Resistors - Voltage divider for transmission signal.
-* 1x 200Ohm 1/4W Resistor - Output signal voltage divider.
-* 2x S-812C24AY-B2-U 16V MAX in, 30mA 2.4V Regulator - Input signal from voltage divider.
+* 1x L78L33ABZ-AP 30V in, 100mA 3.3V Regulator - Input from transmission signal.
+* 1x 200Ohm 1/4W Resistor - Input from transmission signal.
 * 1x FQP30N06L N-Channel Logic MOSFET 60V 30A - Control the horn.
 
 Alternatives to FQP30N06L - FDP5800, IRFIZ48GPBF
